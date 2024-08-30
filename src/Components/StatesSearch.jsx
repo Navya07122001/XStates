@@ -5,8 +5,8 @@ const StatesSearch = () => {
     const [selectedcountry,setSelectedcountry]=useState();
     const [statedata,setStatedata]=useState([]);
     const [citydata,setCitydata]=useState([]);
-    const [selectedstate,setSelectedstate]=useState();
-    const [selectedcity,setSelectedcity]=useState();
+    const [selectedstate,setSelectedstate]=useState('');
+    const [selectedcity,setSelectedcity]=useState('');
   useEffect(()=>{
     const getdata=async()=>{
     const data=await fetchCountries();
@@ -64,7 +64,7 @@ const StatesSearch = () => {
     }
   </select>
 
-  <select  style={{width:'13rem',height:'2rem'}} onChange={handleChange2} disabled={selectedstate?false:true}>
+  <select  style={{width:'13rem',height:'2rem'}} onChange={handleChange2} disabled={selectedstate.length?false:true}>
     <option value="">Select a City</option>
     {citydata?.map((ele,index)=>{
         return (
