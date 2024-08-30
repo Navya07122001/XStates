@@ -74,13 +74,13 @@ const StatesSearch = () => {
                     }
                 </select>
                 {selectedcity &&
-                    <div>
-                        <span>
-                            <span style={{fontSize:"1.3rem",fontWeight:'400'}}>You Selected</span>
-                            <span style={{ fontSize: '1.5rem', fontWeight: '500' }}> {selectedcountry} </span>, 
-                            {selectedstate},{selectedcity}
+                   
+                        <span style={{display:'block',fontSize:'1.2rem'}}>
+                            <span style={{fontSize:"1.3rem",fontWeight:'400'}}>You selected </span>
+                            <span style={{ fontSize: '1.5rem', fontWeight: '500' }}>{selectedcity}, </span>
+                            {selectedstate}, {selectedcountry}
                         </span>
-                    </div>
+                 
                 }
             </div>
         </div>
